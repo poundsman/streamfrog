@@ -1,0 +1,423 @@
+body {
+  padding-top: 50px;
+}
+
+.content {
+  padding: 40px 15px 0 15px;
+}
+
+.logoimg {
+	height: 30px;
+	width: auto;
+	margin-right: 5px;
+	margin-top: -5px;
+}
+
+.live-indication {
+	margin-top: 2px;
+}
+
+.live-indication-admin {
+    font-size: 10px;
+}
+
+footer {
+	text-align: center;
+}
+
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.pagination {
+    margin: 0;
+}
+
+.popover {
+    max-width: 800px;
+    width: auto;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+.flair, a[href='#ael'], a[href='#aware'], a[href='#acid'], a[href='#acidd'], a[href='#bati'], a[href='#benson'], a[href='#bo1'], a[href='#bo2'], a[href='#codchamps'], a[href='#cod4'], a[href='#col'], a[href='#curse'], a[href='#curse-black'], a[href='#crsblack'], a[href='#crsorange'], a[href='#curse-orange'], a[href='#curse-lv'], a[href='#curse-ny'], a[href='#curse-yo'], a[href='#crs'], a[href='#denmark'], a[href='#denial'], a[href='#dogecoin'], a[href='#dpkr'], a[href='#egl'], a[href='#esl'], a[href='#envy'], a[href='#ez'], a[href='#egs'], a[href='#eg'], a[href='#elevate'], a[href='#erupt'], a[href='#epsilon'], a[href='#eswc'], a[href='#fa'], a[href='#fariko'], a[href='#faze'],  a[href='#faze-black'],  a[href='#fazeblack'],  a[href='#faze-red'], a[href='#fear'], a[href='#finalboss'], a[href='#finland'], a[href='#france'],a[href='#fuse'], a[href='#gfinity'], a[href='#ghosts'], a[href='#headshot'], a[href='#icons'], a[href='#immunity'], a[href='#impact'], a[href='#infused'], a[href='#ireland'], a[href='#ixi'], a[href='#iw'], a[href='#justus'], a[href='#kf'],  a[href='#killa'], a[href='#lp'], a[href='#lostabet'], a[href='#millenium'], a[href='#mlg'], a[href='#monster'], a[href='#mw2'], a[href='#mw3'], a[href='#mym'], a[href='#nv'], a[href='#optic'], a[href='#opticnation'], a[href='#optic-nation'], a[href='#orbit'], a[href='#proph'], a[href='#quantic'], a[href='#radius'], a[href='#redbull'], a[href='#revanprincess'], a[href='#revenge'], a[href='#rise'], a[href='#royal'], a[href='#soar'], a[href='#sb'], a[href='#scuf'], a[href='#sk'], a[href='#sublogo'], a[href='#tcm'], a[href='#tk'], a[href='#tko'], a[href='#treyarch'], a[href='#twitch'], a[href='#twitter'], a[href='#umg'], a[href='#unite'], a[href='#vexx'], a[href='#vitality'], a[href='#vq'], a[href='#vvv'], a[href='#australia'], a[href='#belgium'], a[href='#canada'], a[href='#eu'], a[href='#germany'], a[href='#italy'], a[href='#mexico'], a[href='#netherlands'], a[href='#russia'], a[href='#uk'], a[href='#usa'], a[href='#ucgn'], a[href='#xfinity'], a[href='#arrow'], a[href='#sigma'], a[href='#tinfoil'], a[href='#runescape'], a[href='#ohwow'], a[href='#astro'],  a[href='#tacobell'], a[href='#spiderman'], a[href='#doge'], a[href='#acl'], a[href='#aclpro'], a[href='#waw']  {
+    cursor:default;
+    border: none !important;
+    margin: -3px 5px 0 0;
+    background: url('../images/teams.png') no-repeat -9999px -9999px;
+    display: inline-block;
+    vertical-align: middle;
+    text-indent: -9999px;
+    width: 20px;
+    height: 20px;
+}
+.flair-label {
+	margin: 0;
+}
+.label-flair {
+	margin: -4px 0 0 0;
+}
+
+.flair-ael, a[href='#ael'] {
+    background-position: -160px -120px;
+}
+.flair-aware, a[href='#aware'] {
+    background-position: -100px -60px;
+}
+.flair-acid, a[href='#acid'] {
+    background-position: -140px -80px;
+}
+.flair-acidd, a[href='#acidd'] {
+    background-position: -140px -60px;
+}
+.flair-acl, a[href='#acl'] {
+    background-position: -180px -60px;
+}
+.flair-aclpro, a[href='#aclpro'] {
+    background-position: -160px -40px;
+}
+.flair-astro, a[href='#astro'] {
+    background-position: -140px -160px;
+}
+.flair-bati, a[href='#bati'] {
+    background-position: -40px -100px;
+}
+.flair-benson, a[href='#benson'] {
+    background-position: -140px -40px;
+}
+.flair-bo1, a[href='#bo1'] {
+    background-position: -160px -200px;
+}
+.flair-bo2, a[href='#bo2'] {
+    background-position: -180px -20px;
+}
+.flair-codchamps, a[href='#codchamps'] {
+    background-position: -0px -180px;
+}
+.flair-cod4, a[href='#cod4'] {
+    background-position: -160px -140px;
+}
+.flair-col, a[href='#col'] {
+    background-position: 0px 0px;
+}
+.flair-curse, a[href='#curse'], .flair-curse-orange, a[href='#curse-orange'], a[href='#crs'], a[href='#crsorange'] {
+    background-position: 0px -20px;
+}
+.flair-curse-black, a[href='#curse-black'], a[href='#crsblack'] {
+    background-position: -160px -60px;
+}
+.flair-curse-lv, a[href='#curse-lv'] {
+    background-position: -100px -100px;
+}
+.flair-curse-ny, a[href='#curse-ny'] {
+    background-position: -80px -100px;
+}
+.flair-curse-yo, a[href='#curse-yo'] {
+    background-position: -120px -100px;
+}
+.flair-denial, a[href='#denial'] {
+    background-position: -0px -160px;
+}
+.flair-doge, a[href='#doge'] {
+    background-position: -160px -0px;
+}
+.flair-dogecoin, a[href='#dogecoin'] {
+    background-position: -100px -180px;
+}
+.flair-egs, a[href='#egs'] {
+    background-position: -100px -80px;
+}
+.flair-eg, a[href='#eg'] {
+    background-position: -160px -100px;
+}
+.flair-egl, a[href='#egl'] {
+    background-position: -120px -120px;
+}
+.flair-esl, a[href='#esl'] {
+    background-position: -200px -0px;
+}
+.flair-ez, a[href='#ez'] {
+    background-position: -120px -140px;
+}
+.flair-elevate, a[href='#elevate'] {
+    background-position: -20px -100px;
+}
+.flair-erupt, a[href='#erupt'] {
+    background-position: -140px -20px;
+}
+.flair-epsilon, a[href='#epsilon'] {
+    background-position: -40px 0px;
+}
+.flair-eswc, a[href='#eswc'] {
+    background-position: -180px -100px;
+}
+.flair-fa, a[href='#fa'] {
+    background-position: -80px -80px;
+}
+.flair-fariko, a[href='#fariko'] {
+    background-position: -60px 0px;
+}
+.flair-faze, a[href='#faze'], .flair-faze-red, a[href='#faze-red'] {
+    background-position: -80px 0px;
+}
+.flair-fazeblack, a[href='#fazeblack'], .flair-faze-black, a[href='#faze-black'] {
+    background-position: -120px -160px;
+}
+.flair-fear, a[href='#fear'] {
+    background-position: -100px 0px;
+}
+.flair-finalboss, a[href='#finalboss'] {
+    background-position: -60px -60px;
+}
+.flair-france, a[href='#france'] {
+    background-position: -180px -160px;
+}
+.flair-fuse, a[href='#fuse'] {
+    background-position: -20px -20px;
+}
+.flair-gfinity, a[href='#gfinity'] {
+    background-position: -120px -80px;
+}
+.flair-ghosts, a[href='#ghosts'] {
+    background-position: -180px -40px;
+}
+.flair-headshot, a[href='#headshot'] {
+    background-position: -180px -80px;
+}
+.flair-icons, a[href='#icons'] {
+    background-position: -40px -20px;
+}
+.flair-immunity, a[href='#immunity'] {
+    background-position: -60px -100px;
+}
+.flair-impact, a[href='#impact'] {
+    background-position: -120px -20px;
+}
+.flair-infused, a[href='#infused'] {
+    background-position: -20px -80px;
+}
+.flair-ireland, a[href='#ireland'] {
+    background-position: -40px -160px;
+}
+.flair-ixi, a[href='#ixi'] {
+    background-position: -120px -60px;
+}
+.flair-iw, a[href='#iw'] {
+    background-position: -100px -200px;
+}
+.flair-justus, a[href='#justus'] {
+    background-position: -40px -60px;
+}
+.flair-kf, a[href='#kf'] {
+    background-position: -80px -200px;
+}
+.flair-killa, a[href='#killa'] {
+    background-position: -180px -180px;
+}
+.flair-lp, a[href='#lp'] {
+    background-position: -60px -200px;
+}
+.flair-lostabet, a[href='#lostabet'] {
+    background-position: -180px -200px;
+}
+.flair-millenium, a[href='#millenium'] {
+    background-position: -60px -20px;
+}
+.flair-mlg, a[href='#mlg'] {
+    background-position: 0px -80px;
+}
+.flair-monster, a[href='#monster'] {
+    background-position: -180px -60px;
+}
+.flair-mym, a[href='#mym'] {
+    background-position: -40px -80px;
+}
+.flair-mw2, a[href='#mw2'] {
+    background-position: -160px -180px;
+}
+.flair-mw3, a[href='#mw3'] {
+    background-position: -180px 0px;
+}
+.flair-nv, a[href='#nv'], a[href='#envy'] {
+    background-position: 0px -40px;
+}
+.flair-optic, a[href='#optic'] {
+    background-position: 0px -60px;
+}
+.flair-optic-nation, a[href='#optic-nation'], a[href='#opticnation'] {
+    background-position: -160px -80px;
+}
+.flair-orbit, a[href='#orbit'] {
+    background-position: -120px -40px;
+}
+.flair-proph, a[href='#proph'] {
+    background-position: -80px -20px;
+}
+.flair-quantic, a[href='#quantic'] {
+    background-position: -100px -20px;
+}
+.flair-radius, a[href='#radius'] {
+    background-position: -200px -40px;
+}
+.flair-redbull, a[href='#redbull'] {
+    background-position: -180px -140px;
+}
+.flair-revanprincess, a[href='#revanprincess'] {
+    background-position: -180px -120px;
+}
+.flair-revenge, a[href='#revenge'] {
+    background-position: -140px 0px;
+}
+.flair-runescape, a[href='#runescape'] {
+    background-position: -140px -120px;
+}
+.flair-ohwow, a[href='#ohwow'] {
+    background-position: -140px -140px;
+}
+.flair-rise, a[href='#rise'] {
+    background-position: -40px -200px;
+}
+.flair-royal, a[href='#royal'] {
+    background-position: -40px -180px;
+}
+.flair-sb, a[href='#sb'] {
+    background-position: -40px -40px;
+}
+.flair-scuf, a[href='#scuf'] {
+    background-position: -200px -20px;
+}
+.flair-sigma, a[href='#sigma'] {
+    background-position: -60px -180px;
+}
+.flair-spiderman, a[href='#spiderman'] {
+    background-position: -140px -200px;
+}
+.flair-soar, a[href='#soar'] {
+    background-position: -20px -40px;
+}
+.flair-sublogo, a[href='#sublogo'] {
+    background-position: -20px -180px;
+}
+.flair-sk, a[href='#sk'] {
+    background-position: -60px -80px;
+}
+.flair-tacobell, a[href='#tacobell'] {
+    background-position: -140px -180px;
+}
+.flair-tcm, a[href='#tcm'] {
+    background-position: -60px -40px;
+}
+.flair-tinfoil, a[href='#tinfoil'] {
+    background-position: -140px -100px;
+}
+.flair-tk, a[href='#tk'] {
+    background-position: -80px -40px;
+}
+.flair-tko, a[href='#tko'] {
+    background-position: -120px -200px;
+}
+.flair-treyarch, a[href='#treyarch'] {
+    background-position: -0px -200px;
+}
+.flair-twitter, a[href='#twitter'] {
+    background-position: -0px -140px;
+}
+.flair-twitch, a[href='#twitch'] {
+    background-position: -0px -120px;
+}
+.flair-umg, a[href='#umg'] {
+    background-position: -0px -100px;
+}
+.flair-unite, a[href='#unite'] {
+    background-position: -100px -40px;
+}
+.flair-vitality, a[href='#vitality'] {
+    background-position: -80px -60px;
+}
+.flair-vexx, a[href='#vexx'] {
+    background-position: -120px -180px;
+}
+.flair-vq, a[href='#vq'] {
+    background-position: -20px -60px;
+}
+.flair-vvv, a[href='#vvv'] {
+    background-position: -20px -0px;
+}
+.flair-waw, a[href='#waw'] {
+    background-position: -160px -160px;
+}
+.flair-australia, a[href='#australia'] {
+    background-position: -20px -120px;
+}
+.flair-belgium, a[href='#belgium'] {
+    background-position: -40px -120px;
+}
+.flair-canada, a[href='#canada'] {
+    background-position: -60px -120px;
+}
+.flair-denmark, a[href='#denmark'] {
+    background-position: -80px -160px;
+}
+.flair-dpkr, a[href='#dpkr'] {
+    background-position: -100px -160px;
+}
+.flair-eu, a[href='#eu'] {
+    background-position: -80px -120px;
+}
+.flair-finland, a[href='#finland'] {
+    background-position: -60px -160px;
+}
+.flair-germany, a[href='#germany'] {
+    background-position: -100px -120px;
+}
+.flair-italy, a[href='#italy'] {
+    background-position: -20px -140px;
+}
+.flair-mexico, a[href='#mexico'] {
+    background-position: -40px -140px;
+}
+.flair-netherlands, .flair-ned, a[href='#netherlands'] {
+    background-position: -60px -140px;
+}
+.flair-russia, a[href='#russia'] {
+    background-position: -80px -140px;
+}
+.flair-ucgn, a[href='#ucgn'] {
+    background-position: -80px -180px;
+}
+.flair-xfinity, a[href='#xfinity'] {
+    background-position: -20px -200px;
+}
+.flair-uk, a[href='#uk'] {
+    background-position: -100px -140px;
+}
+.flair-usa, a[href='#usa'] {
+    background-position: -20px -160px;
+}
