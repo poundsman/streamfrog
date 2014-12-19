@@ -39,11 +39,13 @@
           <ul class="nav navbar-nav">
               <li><a href="#search"><span class="glyphicon glyphicon-search"></span></a></li>
             </ul>
+	@if (Streamer::first() != null)
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav pull-right">
               <li class="disabled"><a><span class="text-success glyphicon glyphicon-ok"></span>&nbsp;&nbsp;&nbsp;<strong class="text-success">Updated: </strong> <span class="text-success">{{ Date::parse(Streamer::orderBy('updated_at', 'DESC')->first()->updated_at)->ago() }}</span></a></li>
             </ul>
           </div>
+	@endif
     </div>
 
       <section class="content">

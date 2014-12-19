@@ -18,9 +18,7 @@ class AdminController extends BaseController {
 	 * @var array
 	 */
 	protected $streamer_creation_rules = [
-		'name'   => 'required|unique:streamers',
-		'apikey' => 'required|unique:streamers'
-
+		'name'   => 'required|unique:streamers'
 	];
 
 	/**
@@ -42,9 +40,7 @@ class AdminController extends BaseController {
 	 * @var array
 	 */
 	protected $team_creation_rules = [
-		'name'   => 'required|unique:teams',
-		'apikey' => 'required|unique:teams'
-
+		'name'   => 'required|unique:teams'
 	];
 
 	/**
@@ -75,7 +71,7 @@ class AdminController extends BaseController {
 	public function __construct() 
 	{
 		$this->beforeFilter('csrf', ['on' => 'post']);
-		$this->beforeFilter('auth', ['except' => ['getLogin', 'postLogin']]);
+		$this->beforeFilter('auth', ['except' => ['getLogin', 'postLogin', 'getRegisterDefault']]);
 
 		$teams = Team::orderBy('created_at', 'desc');
 		if (Input::has('filter'))

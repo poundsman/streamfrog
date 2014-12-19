@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
-class AddCustomtagsToStreamersTable extends Migration {
+class AddImageUrlToStreamers extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -14,10 +14,9 @@ class AddCustomtagsToStreamersTable extends Migration {
 	{
 		Schema::table('streamers', function(Blueprint $table)
 		{
-			$table->string('customtags')->nullable();
+			$table->string('image_path');
 		});
 	}
-
 
 	/**
 	 * Reverse the migrations.
@@ -28,7 +27,7 @@ class AddCustomtagsToStreamersTable extends Migration {
 	{
 		Schema::table('streamers', function(Blueprint $table)
 		{
-			$table->dropColumn('customtags');
+			$table->dropColumn('image_path');
 		});
 	}
 
