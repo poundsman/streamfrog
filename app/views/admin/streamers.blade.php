@@ -12,7 +12,7 @@
 			<div class="panel panel-primary">
  				<div class="panel-heading">{{ Lang::get('admin.streamers') }}</div>
  				<div class="panel-body text-center">
- 					{{ Form::open(array('role' => 'form', 'method' => 'GET')) }}
+ 					{{ Form::open(array('role' => 'form', 'method' => 'GET', 'enctype' => 'multipart/form-data')) }}
 						{{ Form::text('filter', Input::has('filter') ? Input::get('filter') : null, array('placeholder' => Lang::get('admin.filter_placeholder'), 'class' => 'form-control')) }}
 					{{ Form::close() }}
 				</div>
@@ -144,7 +144,7 @@
 			<div class="panel panel-primary">
  				<div class="panel-heading">{{ Lang::get('admin.streamer.add_new') }}</div>
  				<div class="panel-body">
-					{{ Form::open(array('role' => 'form')) }}
+					{{ Form::open(array('role' => 'form', 'enctype' => 'multipart/form-data')) }}
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
@@ -207,6 +207,11 @@
 						    {{ Form::label('tags', Lang::get("admin.additional_tags") . ' (' . Lang::get("admin.streamer.additional_tags_help") . ')') }}
 						    {{ Form::text('tags', Input::old('tags'), array('class' => 'form-control')) }}
 						    {{ $errors->first('tags', '<p class="text-danger">:message</p>') }}
+						</div>
+						<div class="form-group {{ $errors->has('image_url') ? 'has-error' : '' }}">
+						    {{ Form::label('image_path', Lang::get("admin.image_url") . ' (' . Lang::get("admin.streamer.image_url_help") . ')') }}
+						    {{ Form::file('image_path', Input::old('image_path'), array('class' => 'form-control')) }}
+						    {{ $errors->first('image_path', '<p class="text-danger">:message</p>') }}
 						</div>
 						{{ Form::submit(Lang::get("admin.streamer.add_new_submit"), array('class' => 'btn btn-primary')) }}
 					{{ Form::close() }}

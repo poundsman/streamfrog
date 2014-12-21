@@ -298,6 +298,11 @@ class AdminController extends BaseController {
 		$streamer->url = Input::get('url');
 		$streamer->twitter = Input::get('twitter');
 
+		$img = Input::file('image_path');
+		$imageStoragePath = public_path().'/img/streamers/';
+		$img->move($imageStoragePath, $img->getClientOriginalName());
+		$streamer->image_path = 'img/streamers/'.$img->getClientOriginalName();
+
 		if ($streamer->save()) 
 		{
 			if ($streamer->createTags(Input::get('tags')))
