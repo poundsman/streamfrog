@@ -2,6 +2,21 @@
 
 class UpdateController extends BaseController {
 
+	public function uploadMedia($parameters = array())
+	{
+		if(!array_key_exists('media', $parameters) && !array_key_exists('media_data', $parameters))
+		{
+			throw new \Exception('Parameter required missing : media or media_data');
+		}
+		$parameters["status"] = "Combined.";
+		$parameters["trim_users"] = 1;
+		Twitter::set_new_config(array('host' => 'upload.twitter.com'));	
+		$result = Twitter::query('media/upload.json', 'POST', $parameters, true);
+		Twitter::set_new_config(array());
+
+		return $result;
+	}
+
 	/**
 	 * Updates streams at /index (is also the default action) [CALLED BY CRONJOB]
 	 * 
@@ -25,8 +40,21 @@ class UpdateController extends BaseController {
 			{
 				if ($twitchStreamer->status != 1)
 				{
-					Twitter::postTweet(['status' => '. @' . $twitchStreamer->twitter . ' is now live on @Twitch ' . $twitchStreamer->url, 'format' => 'json']);
+					$tweetParams = array();
+					$tweetParams['status'] = '@' . $twitchStreamer->twitter . ' is now live on @Twitch ' . $twitchStreamer->url;
+					$tweetParams['format'] = 'json';
+
+					$streamerImgPath = $twitchStreamer->image_path;
+					if($streamerImgPath != null && file_exists($streamerImgPath)) {
+						$streamerImg = file_get_contents($streamerImgPath);
+						$uploadParams = array('media' => $streamerImg);
+						$uploadResponse = $this->uploadMedia($uploadParams);
+						$tweetParams['media_ids'] = $uploadResponse->media_id_string;
+					}
+
+					$tweetResult = Twitter::postTweet($tweetParams);
 					$twitchStreamer->status = 1;
+
 
 					$stream = new Stream;
 					$stream->streamer_id = $twitchStreamer->id;
@@ -50,6 +78,7 @@ class UpdateController extends BaseController {
 			}  else {
 				if ($twitchStreamer->status == 1)
 				{
+					echo "Offline";
 					$twitchStreamer->status = 0;
 					$twitchStreamer->viewers = 0;
 
