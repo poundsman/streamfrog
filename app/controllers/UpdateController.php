@@ -78,7 +78,6 @@ class UpdateController extends BaseController {
 			}  else {
 				if ($twitchStreamer->status == 1)
 				{
-					echo "Offline";
 					$twitchStreamer->status = 0;
 					$twitchStreamer->viewers = 0;
 
