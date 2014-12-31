@@ -38,10 +38,14 @@ class UpdateController extends BaseController {
 
 			if ($twitchJSON->stream)
 			{
-				if ($twitchStreamer->status != 1)
+				$currentDateTime = new DateTime;
+				$dateTimeWentLive = new DateTime($twitchStreamer->last_live);
+				$nextDateTimeTweetable = $dateTimeWentLive;
+				$nextDateTimeTweetable->add(new DateInterval('PT6H')); 
+				if ($twitchStreamer->status != 1 && $nextDateTimeTweetable < $currentDateTime)
 				{
 					$tweetParams = array();
-					$tweetParams['status'] = '@' . $twitchStreamer->twitter . ' is now live on @Twitch ' . $twitchStreamer->url;
+					$tweetParams['status'] = '.@' . $twitchStreamer->twitter . ' is now LIVE on @Twitch! ' . $twitchStreamer->url;
 					$tweetParams['format'] = 'json';
 
 					$streamerImgPath = $twitchStreamer->image_path;
@@ -54,7 +58,7 @@ class UpdateController extends BaseController {
 
 					$tweetResult = Twitter::postTweet($tweetParams);
 					$twitchStreamer->status = 1;
-
+					$twitchStreamer->last_live = $currentDateTime;
 
 					$stream = new Stream;
 					$stream->streamer_id = $twitchStreamer->id;
