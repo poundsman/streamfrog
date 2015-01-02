@@ -62,7 +62,7 @@
 		
 		private function getStreamerStatus($streamerName, $twitchStatusJSON) {
 			foreach($twitchStatusJSON->streams as $stream) {
-				if($stream->channel->name == $streamerName) {
+				if(strtolower($stream->channel->name) === strtolower($streamerName)) {
 					return $stream;
 				}
 			}
