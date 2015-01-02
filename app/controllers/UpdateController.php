@@ -90,7 +90,8 @@
 				$stream->type = "twitch";
 		
 				if($this->shouldPostTweetFor($twitchStream, $hasPreviouslyBeenOnline)) {
-					$this->tweetFor($twitchStream);
+					//$this->tweetFor($twitchStream);
+					$this->writeToDebugFile($twitchStream, $hasPreviouslyBeenOnline, $isCurrentlyOnline, $streamerStatus);
 					$twitchStream->last_live = new DateTime;
 				}
 				
@@ -132,6 +133,13 @@
 			foreach($twitchStreamers as $twitchStream) {
 				$this->handleTwitchStreamer($twitchStream, $twitchStatusJSON);
 			}
+		}
+		
+		private function writeToDebugFile($twitchStream, $hasPreviouslyBeenOnline, $isCurrentlyOnline, $streamerStatus) {
+			$filePath = public_path() . "/log.txt";
+			$prevOnline = $hasPreviouslyBeenOnline ? "TRUE" : "FALSE";
+			$output = (new DateTime)->format('d-m-y H:m') . "," . $twitchStream->twitch .",PrevOnline:". $prevOnline . ",currentOnline:".$isCurrentlyOnline.",last_tweet:".$twitchStream->last_live."\r\n";
+			file_put_contents($filePath, $output, FILE_APPEND);
 		}
 		
 		public function getIndex() 
